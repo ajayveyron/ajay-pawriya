@@ -2,6 +2,8 @@
 
 A local-first, versioned source of personal context for AI tools and agents. It is deliberately useful without an API key, a vector database, or a hosted service.
 
+Install it with `npm install @ajaypawriya/ajay-pawriya`.
+
 ## What is here
 
 - `identity.md` — stable context about Ajay.
@@ -37,4 +39,3 @@ sources:
 ```
 
 Write only observations that are supported by the listed source. Use `confidence: medium` or `low` when the record contains an inference or an older snapshot. `privacy: restricted` is for context that must never be sent to an external destination without explicit permission.
-
