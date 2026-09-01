@@ -7,7 +7,7 @@
   },
   "type": "module",
   "bin": {
-    "ajay-ai": "./bin/ajay-ai.mjs"
+    "ajay-ai": "bin/ajay-ai.mjs"
   },
   "scripts": {
     "validate": "node ./scripts/validate.mjs",
