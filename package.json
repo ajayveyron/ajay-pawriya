@@ -1,6 +1,6 @@
 {
   "name": "@ajaypawriya/ajay-pawriya",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A versioned, local-first personal context package for Ajay Pawriya.",
   "publishConfig": {
     "access": "public"
@@ -16,8 +16,10 @@
   "files": [
     "bin",
     "memories",
+    "projects",
     "scripts",
     "skills",
+    "now.md",
     "identity.md",
     "preferences.md",
     "writing-style.md",

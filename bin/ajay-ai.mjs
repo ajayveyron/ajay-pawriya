@@ -5,7 +5,8 @@ import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const memoriesRoot = join(root, "memories");
+const recordRoots = [join(root, "memories"), join(root, "projects")];
+const rootRecordFiles = [join(root, "now.md")];
 
 async function markdownFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -35,8 +36,13 @@ function excerpt(markdown, tokens) {
 }
 
 async function records() {
+  const nestedFiles = (
+    await Promise.all(recordRoots.map((directory) => markdownFiles(directory)))
+  ).flat().filter((file) => !file.endsWith("/README.md"));
+  const files = [...nestedFiles, ...rootRecordFiles];
+
   return Promise.all(
-    (await markdownFiles(memoriesRoot)).filter((file) => !file.endsWith("/README.md")).map(async (file) => ({
+    files.map(async (file) => ({
       file,
       markdown: await readFile(file, "utf8"),
     })),
@@ -63,7 +69,7 @@ if (command === "search" && terms.length > 0) {
     .sort((a, b) => b.score - a.score);
 
   if (ranked.length === 0) {
-    console.log("No matching memories.");
+    console.log("No matching context records.");
     process.exit(0);
   }
 
@@ -76,4 +82,3 @@ if (command === "search" && terms.length > 0) {
 
 usage();
 process.exitCode = 1;
-

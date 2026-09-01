@@ -12,8 +12,9 @@ Use this skill when a request benefits from Ajay's established preferences, acti
 ## Load context selectively
 
 1. Read `identity.md` for stable baseline context.
-2. Read `preferences.md` and `writing-style.md` when the task involves collaboration or communication.
-3. Search `memories/` with `node bin/ajay-ai.mjs search "<topic>"`, then read only the relevant records.
+2. Read `now.md` when current professional focus or active work matters.
+3. Read `preferences.md` and `writing-style.md` when the task involves collaboration or communication.
+4. Search `memories/` and `projects/` with `node bin/ajay-ai.mjs search "<topic>"`, then read only the relevant records.
 
 Treat `confidence` and `sources` as part of the content. A record can inform an answer but does not prove that a time-sensitive fact remains current; verify current state when it matters.
 
@@ -24,5 +25,6 @@ Treat `confidence` and `sources` as part of the content. A record can inform an 
 - Do not store credentials, secrets, medical details, or raw private conversations in this repository.
 - Update a memory only when Ajay explicitly asks. Record the source, date, confidence, and privacy classification.
 
-Prefer a small, relevant context set over loading the entire repository.
+This npm package is public. Privacy frontmatter is handling guidance, not access control; only public-safe records belong here.
 
+Prefer a small, relevant context set over loading the entire repository.

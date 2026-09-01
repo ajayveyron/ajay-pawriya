@@ -7,9 +7,11 @@ Install it with `npm install @ajaypawriya/ajay-pawriya`.
 ## What is here
 
 - `identity.md` — stable context about Ajay.
+- `now.md` — current professional focus, dated so it can go stale safely.
 - `preferences.md` — working and collaboration preferences.
 - `writing-style.md` — communication guidance.
 - `memories/` — dated, sourced records with confidence and privacy metadata.
+- `projects/` — public project cards for current work and selected experiments.
 - `skills/ajay-personal-context/` — a portable Codex skill that loads this context selectively.
 
 ## Use it locally
@@ -17,10 +19,14 @@ Install it with `npm install @ajaypawriya/ajay-pawriya`.
 ```bash
 npm run validate
 node bin/ajay-ai.mjs list
-node bin/ajay-ai.mjs search "creator workflow"
+node bin/ajay-ai.mjs search "geo repair"
 ```
 
-To use the skill in Codex, copy or symlink `skills/ajay-personal-context` into the local skills directory. Keep this repository private unless every included memory is safe to share.
+To use the skill in Codex, copy or symlink `skills/ajay-personal-context` into the local skills directory.
+
+## Public-release boundary
+
+This repository and npm package are public. Only add context that is safe to share publicly. `privacy` frontmatter records an intended handling level for downstream tools; it does not make a published file private. Keep sensitive context in an unpublished local repository.
 
 ## Adding a memory
 

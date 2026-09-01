@@ -3,7 +3,8 @@ import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const memoriesRoot = join(root, "memories");
+const recordRoots = [join(root, "memories"), join(root, "projects")];
+const rootRecordFiles = [join(root, "now.md")];
 const required = ["type", "title", "updated", "confidence", "privacy", "sources"];
 
 async function markdownFiles(directory) {
@@ -19,7 +20,8 @@ async function markdownFiles(directory) {
 }
 
 const problems = [];
-for (const file of await markdownFiles(memoriesRoot)) {
+const nestedFiles = (await Promise.all(recordRoots.map((directory) => markdownFiles(directory)))).flat();
+for (const file of [...nestedFiles, ...rootRecordFiles]) {
   const markdown = await readFile(file, "utf8");
   const frontmatter = markdown.match(/^---\n([\s\S]*?)\n---\n/);
   const label = relative(root, file);
@@ -36,7 +38,7 @@ for (const file of await markdownFiles(memoriesRoot)) {
   }
   if (!/^updated:\s*\d{4}-\d{2}-\d{2}$/m.test(yaml)) problems.push(`${label}: updated must use YYYY-MM-DD`);
   if (!/^confidence:\s*(high|medium|low)$/m.test(yaml)) problems.push(`${label}: invalid confidence`);
-  if (!/^privacy:\s*(private|restricted)$/m.test(yaml)) problems.push(`${label}: invalid privacy`);
+  if (!/^privacy:\s*(public|private|restricted)$/m.test(yaml)) problems.push(`${label}: invalid privacy`);
 }
 
 if (problems.length > 0) {

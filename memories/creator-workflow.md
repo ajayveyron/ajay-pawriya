@@ -3,7 +3,7 @@ type: workflow
 title: Short-form creator workflow
 updated: 2026-09-01
 confidence: high
-privacy: private
+privacy: public
 sources:
   - personal workflow summary, 2026-09-01
 ---
@@ -13,4 +13,3 @@ Ajay tracks short-form video ideas in Notion, drafts scripts in Apple Notes, and
 Freeform boards are used as lightweight, spatial moodboards. Recent examples include `Frame Ideas` and `Aesthetic Story ideas`.
 
 When helping with creator work, preserve the path from idea to script to visual references rather than treating each artifact as isolated.
-

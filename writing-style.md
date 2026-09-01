@@ -3,7 +3,7 @@ type: writing-style
 title: Communication style
 updated: 2026-09-01
 confidence: medium
-privacy: private
+privacy: public
 sources:
   - observed collaboration preferences, 2026-09-01
 ---
@@ -16,4 +16,3 @@ Write with a practical, direct, collaborative tone.
 - Use structure only when it clarifies a decision or sequence.
 - Avoid pretending a plan, deployment, or result is complete without verification.
 - Match the user's level of detail; elaborate when the stakes or uncertainty justify it.
-

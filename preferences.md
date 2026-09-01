@@ -3,7 +3,7 @@ type: preference
 title: Working preferences
 updated: 2026-09-01
 confidence: high
-privacy: private
+privacy: public
 sources:
   - personal-context bootstrap, 2026-09-01
 ---
@@ -15,4 +15,3 @@ sources:
 - Separate verified facts from assumptions. State uncertainty rather than filling gaps.
 - Give inspectable artifact locations and evidence for research or implementation work.
 - Keep product updates customer-facing unless explicitly asked for internal coverage.
-

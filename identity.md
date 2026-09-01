@@ -3,7 +3,7 @@ type: identity
 title: Ajay Pawriya
 updated: 2026-09-01
 confidence: high
-privacy: private
+privacy: public
 sources:
   - personal-context bootstrap, 2026-09-01
 ---
@@ -16,4 +16,3 @@ Ajay works hands-on across product delivery, design, and creator workflows.
 - Values concrete artifacts, visual review, and verified local or remote status over assumptions.
 
 This is an operating profile, not a biography. Do not infer personal facts beyond the records in this repository.
-
