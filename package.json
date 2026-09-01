@@ -1,0 +1,32 @@
+{
+  "name": "ajay-personal-ai",
+  "version": "0.1.0",
+  "description": "A versioned, local-first personal context package for Ajay Pawriya.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "ajay-ai": "./bin/ajay-ai.mjs"
+  },
+  "scripts": {
+    "validate": "node ./scripts/validate.mjs",
+    "search": "node ./bin/ajay-ai.mjs search"
+  },
+  "files": [
+    "bin",
+    "memories",
+    "scripts",
+    "skills",
+    "identity.md",
+    "preferences.md",
+    "writing-style.md",
+    "README.md"
+  ],
+  "keywords": [
+    "personal-context",
+    "agent-skill",
+    "memory"
+  ],
+  "license": "UNLICENSED"
+}
